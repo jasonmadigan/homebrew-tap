@@ -20,7 +20,7 @@ class PodmanMacNetConnect < Formula
 
     system "make", "VERSION=#{version}", "build-go"
     
-    bin.install Dir["*"]
+    bin.install "podman-mac-net-connect"
   end
 
   service do
