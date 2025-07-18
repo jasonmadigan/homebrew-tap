@@ -28,7 +28,8 @@ class PodmanMacNetConnect < Formula
     run opt_bin/"podman-mac-net-connect"
     log_path var/"log/podman-mac-net-connect/std_out.log"
     error_log_path var/"log/podman-mac-net-connect/std_error.log"
-    environment_variables PATH: "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    environment_variables PATH: "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+                          HOME: ENV["HOME"]
   end  
 
   test do
